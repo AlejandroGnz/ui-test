@@ -1,0 +1,32 @@
+.people-card {
+  &__progress {
+    display: flex;
+  }
+
+  &__progress-icon {
+    margin: 0 10px;
+  }
+  &__progress-label {
+    position: absolute;
+  }
+  &__progress-val {
+    display: flex;
+    height: 36px;
+    align-items: center;
+    color: #fff;
+
+    font-family: Lato;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+
+    &--up {
+      background: #3cbbb499;
+      justify-content: flex-start;
+    }
+    &--down {
+      background: #f9ad1d99;
+      justify-content: flex-end;
+    }
+  }
+}

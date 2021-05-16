@@ -33,5 +33,14 @@
         "endOfLine": "auto"
       }
     ]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.tsx"],
+      "rules": {
+        "react/require-default-props": "off",
+        "react/prop-types": "off"
+      }
+    }
+  ]
 }

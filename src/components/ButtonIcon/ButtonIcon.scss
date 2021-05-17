@@ -1,0 +1,20 @@
+.buttons {
+  border: none;
+  outline: none;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &--up {
+    background: #3cbbb4cc;
+  }
+  &--down {
+    background: #fbbd4a;
+  }
+
+  &--active {
+    border: 1px solid #fff;
+  }
+}

@@ -20,7 +20,7 @@ describe("VotesInput Component", () => {
       <VotesInput onSubmit={onSubmit} />
     );
 
-    const [downVoteBtn] = getAllByRole("button");
+    const [, downVoteBtn] = getAllByRole("button");
 
     await fireEvent.click(downVoteBtn);
     await fireEvent.click(getByText("Vote Now"));
@@ -33,7 +33,7 @@ describe("VotesInput Component", () => {
       <VotesInput onSubmit={onSubmit} />
     );
 
-    const [, upVoteBtn] = getAllByRole("button");
+    const [upVoteBtn] = getAllByRole("button");
 
     await fireEvent.click(upVoteBtn);
     await fireEvent.click(getByText("Vote Now"));
@@ -45,7 +45,7 @@ describe("VotesInput Component", () => {
       <VotesInput onSubmit={onSubmit} />
     );
 
-    const [downVoteBtn] = getAllByRole("button");
+    const [, downVoteBtn] = getAllByRole("button");
 
     await fireEvent.click(downVoteBtn);
     await fireEvent.click(getByText("Vote Now"));

@@ -1,6 +1,8 @@
 .votes-input {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
+  margin-bottom: 12px;
 
   &__buttons {
     display: flex;
@@ -8,34 +10,24 @@
     justify-content: center;
     border: none;
     outline: none;
-    height: 2.75rem;
-    width: 2.75rem;
-    background: transparent;
+    height: 38px;
     padding: 0;
-    color: white;
 
+    &--vote-icon {
+      margin-right: 12px;
+    }
     &--vote {
       background: #30303099;
-      width: auto;
+      color: white;
       padding: 0 26px;
       font-family: Lato;
       font-size: 15px;
       line-height: 18px;
       border: 1px solid white;
+      margin-right: 0;
       &:disabled {
         background: #00000099;
       }
-    }
-    &--vote-up {
-      background: #fbbd4a;
-      margin-right: 12px;
-    }
-    &--vote-down {
-      background: #3cbbb4cc;
-      margin-right: 12px;
-    }
-    &--active {
-      border: 1px solid white;
     }
   }
 }

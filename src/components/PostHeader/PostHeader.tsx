@@ -10,6 +10,7 @@ const PostHeader: React.FC<Props> = ({ onChange }) => {
       <h2 className="posts-header__title">Previous Rulings</h2>
       <div className="select">
         <select
+          data-testid="select"
           className="select__select"
           defaultValue="grid"
           onChange={({ target }) => {

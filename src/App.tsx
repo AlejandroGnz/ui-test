@@ -4,7 +4,13 @@ import list from "./assets/data.json";
 
 const App: React.FC = () => {
   return (
-    <div style={{ display: "flex", flexWrap: "wrap" }}>
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "space-between",
+      }}
+    >
       {list.data.map(
         ({ picture, name, description, votes, category, lastUpdated }) => (
           <Card

@@ -1,6 +1,7 @@
 .people-card {
   &__progress {
     display: flex;
+    position: relative;
   }
 
   &__progress-icon {

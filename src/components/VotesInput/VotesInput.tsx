@@ -31,7 +31,7 @@ const VotesInput: React.FC<Props> = ({
   };
 
   return (
-    <>
+    <div>
       {renderUpdateLabel({ vote })}
       <div className="votes-input">
         {vote === false && (
@@ -61,7 +61,7 @@ const VotesInput: React.FC<Props> = ({
           {vote === false ? "Vote Now" : "Vote Again"}
         </button>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -5,18 +5,7 @@ import CardCaption from "../CardCaption/CardCaption";
 import "./Card.scss";
 import CardUptadeTime from "../CardUptadeTime/CardUptadeTime";
 
-interface Props {
-  name: string;
-  description: string;
-  category: string;
-  picture: string;
-  lastUpdated: string;
-  votes: {
-    positive: number;
-    negative: number;
-  };
-}
-const Card: React.FC<Props> = ({
+const Card: React.FC<Celebrity> = ({
   picture,
   votes,
   name,

@@ -1,19 +1,33 @@
-import React from "react";
+import React, { useCallback } from "react";
 import VotesInput from "../VotesInput/VotesInput";
 import VotedProgress from "../VotesProgress/VotedProgress";
 import CardCaption from "../CardCaption/CardCaption";
 import "./Card.scss";
 import CardUptadeTime from "../CardUptadeTime/CardUptadeTime";
+import useVotesCount from "../../hooks/useVotesCount";
 
 const Card: React.FC<Celebrity> = ({
   picture,
-  votes,
+  votes: defaultVotes,
   name,
   description,
   lastUpdated,
   category,
 }) => {
+  const [votes, { increase, decrease }] = useVotesCount(name, defaultVotes);
   const { positive, negative } = votes;
+
+  const handleSubmit = useCallback(
+    (value: string) => {
+      if (value === "VOTE_UP") {
+        increase();
+      }
+      if (value === "VOTE_DOWN") {
+        decrease();
+      }
+    },
+    [increase, decrease]
+  );
 
   return (
     <div className="people-card">
@@ -32,7 +46,7 @@ const Card: React.FC<Celebrity> = ({
                   category={category}
                 />
               )}
-              onSubmit={() => {}}
+              onSubmit={handleSubmit}
             />
           </div>
           <VotedProgress votesUp={positive} votesDown={negative} />

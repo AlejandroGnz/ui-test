@@ -33,7 +33,7 @@ const useVotesCount = (
       .firestore()
       .collection("votes")
       .doc(documentId)
-      .update({ negative: firebase.firestore.FieldValue.increment(-1) });
+      .update({ negative: firebase.firestore.FieldValue.increment(1) });
   }, [documentId]);
 
   useEffect(() => {
